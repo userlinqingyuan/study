@@ -54,6 +54,18 @@ http://127.0.0.1:4173
 
 构建产物位于 `dist/`。
 
+## 在线访问
+
+GitHub Pages 地址：
+
+```text
+https://userlinqingyuan.github.io/study/
+```
+
+线上版本由 [GitHub Actions 部署工作流](.github/workflows/deploy-pages.yml) 构建并发布：每次向 `main` 推送后，工作流会安装依赖、执行 `npm run build`，再将 `dist/` 上传到 GitHub Pages。
+
+不要将 Pages 发布源设为仓库根目录。根目录的 `index.html` 只是 Vite 的开发入口，浏览器无法直接加载 `.vue` 文件、裸模块导入和未构建的样式，会导致 PC 与移动端均出现黑屏。
+
 ## 功能清单
 
 ### 看板与交互
